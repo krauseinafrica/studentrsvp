@@ -5,7 +5,7 @@ import pandas as pd
 # Connect to the Google Sheet (replace 'your-sheet-id' with the actual ID)
 SHEET_ID = "your-google-sheet-id"
 gc = gspread.service_account()  # Ensure service account JSON is in your project folder
-sh = gc.open_by_key(SHEET_ID)
+sh = gc.open_by_url(https://docs.google.com/spreadsheets/d/12JIjGKy0TUTHO8HmnSc88JhtutxONOblF94Q5D41KRs/edit?usp=sharing)
 worksheet = sh.get_worksheet(0)  # Access the first sheet
 
 # Load data into a pandas DataFrame
