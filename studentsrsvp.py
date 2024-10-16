@@ -2,9 +2,14 @@ import streamlit as st
 import pandas as pd
 import gspread
 from datetime import datetime, timedelta
+from streamlit_gsheets import GSheetsConnection
+
+# Create a connection object.
+conn = st.connection("gsheets", type=GSheetsConnection)
+
 
 # Constants: Public Google Sheet link and worksheet setup
-SHEET_URL = "https://docs.google.com/spreadsheets/d/12JIjGKy0TUTHO8HmnSc88JhtutxONOblF94Q5D41KRs/edit#gid=0"
+SHEET_URL = "https://docs.google.com/spreadsheets/d/12JIjGKy0TUTHO8HmnSc88JhtutxONOblF94Q5D41KRs"
 gc = gspread.service_account()  # Requires Google Sheets API service account JSON in your project directory
 worksheet = gc.open_by_url(SHEET_URL).sheet1  # Access the first worksheet
 
