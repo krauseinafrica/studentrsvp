@@ -24,7 +24,7 @@ with st.form("rsvp_form"):
 
     if submit:
         # Append new row to Google Sheet
-        worksheet.append_row([name, email, attending])
+        worksheet.append_row([name, email, attending, pd.Timestamp.now().strftime("%Y-%m-%d %H:%M:%S")])
         st.success("Thank you for your RSVP!")
 
 # Display current RSVP list
