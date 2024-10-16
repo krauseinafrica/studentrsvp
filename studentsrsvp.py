@@ -73,11 +73,11 @@ spreadsheet from your application or a script.
 ```
 # .streamlit/secrets.toml
 [connections.gsheets]
-spreadsheet = "<spreadsheet-name-or-url>"
+spreadsheet = "https://docs.google.com/spreadsheets/d/12JIjGKy0TUTHO8HmnSc88JhtutxONOblF94Q5D41KRs/edit?gid=0#gid=0"
 
 # worksheet GID is used when using Public Spreadsheet URL, when using service_account
 # it will be picked as folder_id
-worksheet = "<worksheet-gid-or-folder-id>"
+worksheet = "0"
 
 # leave empty when using Public Spreadsheet URL, when using
 # service_account -> type = "service_account"
