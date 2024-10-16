@@ -1,4 +1,5 @@
 gspread
 numpy
+pandasql
 pandas==1.5.3
 st-gsheets-connection
